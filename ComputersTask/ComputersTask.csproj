@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
+    <Compile Include="IInventory.cs" />
+    <Compile Include="ISellable.cs" />
+    <Compile Include="IShop.cs" />
+    <Compile Include="SellableComputer.cs" />
     <Compile Include="Computer.cs" />
     <Compile Include="ComputerClass.cs" />
     <Compile Include="IApplication.cs" />
@@ -52,6 +56,8 @@
     <Compile Include="ISwitchable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop.cs" />
+    <Compile Include="Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

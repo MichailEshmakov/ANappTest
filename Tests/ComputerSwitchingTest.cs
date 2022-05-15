@@ -8,7 +8,7 @@ namespace Tests
     /// Тестирование случая 1. "Включение/перезагрузка компьютера"
     /// </summary>
     [TestClass]
-    public class SwitchableComputerTest
+    public class ComputerSwitchingTest
     {
         [TestMethod]
         public void WhenSwitchOff_AndComputerIsOn_ThenComputerSwitchingOff()

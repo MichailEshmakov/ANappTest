@@ -49,9 +49,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SwitchableComputerTest.cs" />
+    <Compile Include="ComputerSwitchingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ComputerClassTest.cs" />
+    <Compile Include="ComputerSellingTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
