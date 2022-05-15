@@ -10,9 +10,10 @@ namespace ComputersTask
     /// Основной класс компьютера. Специфика задания заставляет меня подозревать, что от меня хотят видеть сегрегацию интерфйсов.
     /// Так что тут много интерфейсов. Каждый отвечает за те возможности компьютера, которые интересны в определенной ситуации, абстрагируя от всего остального
     /// </summary>
-    public class Computer : ISwitchable
+    public class Computer : ISwitchable, IInstallingSuitable
     {
         private bool _isOn;
+        private readonly List<IApplication> _applications;
 
         public event Action SwitchedOff;
 
@@ -21,6 +22,7 @@ namespace ComputersTask
         public Computer(bool isOn = false)
         {
             _isOn = isOn;
+            _applications = new List<IApplication>();
         }
 
         public void SwitchOff()
@@ -44,6 +46,22 @@ namespace ComputersTask
         {
             SwitchOff();
             SwitchOn();
+        }
+
+        public bool HasApplication(IApplication application)
+        {
+            return _applications.Contains(application);
+        }
+
+        public void Install(IApplication application)
+        {
+            if (HasApplication(application))
+                throw new InvalidOperationException();
+
+            if (_isOn == false)
+                throw new InvalidOperationException();
+
+            _applications.Add(application);
         }
     }
 }

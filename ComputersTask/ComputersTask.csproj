@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application.cs" />
     <Compile Include="Computer.cs" />
+    <Compile Include="ComputerClass.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="IComputerClass.cs" />
+    <Compile Include="IInstallingSuitable.cs" />
     <Compile Include="ISwitchable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
