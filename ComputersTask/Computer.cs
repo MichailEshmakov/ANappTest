@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ComputersTask
 {
@@ -23,10 +20,10 @@ namespace ComputersTask
 
         public IReadOnlyList<IComputerDetail> Details => _details.Details;
 
-        public Computer(bool isOn = false, bool haveToCreateDetails = true)
+        public Computer(bool isOn = false, bool hasToCreateDetails = true)
         {
             _applications = new List<IApplication>();
-            _details = new AssemblableComputer(master: this, haveToCreateDetails: haveToCreateDetails);
+            _details = new AssemblableComputer(master: this, hasToCreateDetails: hasToCreateDetails);
             if (IsAssembled() == false && isOn)
                 throw new ArgumentException(nameof(isOn));
 

@@ -49,6 +49,7 @@
     <Compile Include="IAssemblableComputer.cs" />
     <Compile Include="IComputerDetail.cs" />
     <Compile Include="IInventory.cs" />
+    <Compile Include="IMeltable.cs" />
     <Compile Include="ISellable.cs" />
     <Compile Include="IShop.cs" />
     <Compile Include="ComputerDetail.cs" />

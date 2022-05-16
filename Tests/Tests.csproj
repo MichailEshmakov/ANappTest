@@ -54,6 +54,7 @@
     <Compile Include="ComputerClassTest.cs" />
     <Compile Include="ComputerSellingTest.cs" />
     <Compile Include="ComputerAssemblingTest.cs" />
+    <Compile Include="ComputerDetailMeltingTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

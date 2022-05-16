@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ComputersTask
 {
     /// <summary>
-    /// Класс, ответсвенный за сборку компьютера из деталей. 
+    /// Класс, ответсвенный за сборку компьютера из деталей.
     /// При установке детали проверяет, установился ли в качестве компьютера детали.
     /// </summary>
     public class AssemblableComputer : IAssemblableComputer
@@ -17,9 +15,9 @@ namespace ComputersTask
 
         public IReadOnlyList<IComputerDetail> Details => _details.ToList();
 
-        public AssemblableComputer(bool haveToCreateDetails = true, IAssemblableComputer master = null)
+        public AssemblableComputer(bool hasToCreateDetails = true, IAssemblableComputer master = null)
         {
-            if (haveToCreateDetails)
+            if (hasToCreateDetails)
             {
                 foreach (ComputerDetailType detailType in Enum.GetValues(typeof(ComputerDetailType)))
                 {

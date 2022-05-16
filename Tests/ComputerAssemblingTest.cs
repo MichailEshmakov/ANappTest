@@ -52,8 +52,8 @@ namespace Tests
         public void WhenSetDetail_AndItIsSetOnOtherComputer_ThenThrowingException()
         {
             // Arrange.
-            IAssemblableComputer firstComputer = new Computer(haveToCreateDetails: true);
-            IAssemblableComputer secondComputer = new Computer(haveToCreateDetails: false);
+            IAssemblableComputer firstComputer = new Computer(hasToCreateDetails: true);
+            IAssemblableComputer secondComputer = new Computer(hasToCreateDetails: false);
             
             // Act.
 
@@ -65,7 +65,7 @@ namespace Tests
         public void WhenSetDetail_AndItIsAlreadySet_ThenThrowingException()
         {
             // Arrange.
-            IAssemblableComputer computer = new Computer(haveToCreateDetails: true);
+            IAssemblableComputer computer = new Computer(hasToCreateDetails: true);
 
             // Act.
 
@@ -77,7 +77,7 @@ namespace Tests
         public void WhenSetDetail_AndItsTypeIsAlreadySet_ThenThrowingException()
         {
             // Arrange.
-            IAssemblableComputer computer = new Computer(haveToCreateDetails: true);
+            IAssemblableComputer computer = new Computer(hasToCreateDetails: true);
             IComputerDetail detail = new ComputerDetail(ComputerDetailType.Motherboard);
 
             // Act.
@@ -90,7 +90,7 @@ namespace Tests
         public void WhenCheckAssembling_AndThereAreNotAllDetailsInComputer_ThenComputerIsNotAssembled()
         {
             // Arrange.
-            IAssemblableComputer computer = new Computer(haveToCreateDetails: false);
+            IAssemblableComputer computer = new Computer(hasToCreateDetails: false);
 
             // Act.
             bool isComputerAssembled = computer.IsAssembled();
@@ -103,7 +103,7 @@ namespace Tests
         public void WhenCheckAssembling_AndThereAreAllDetailsInComputer_ThenComputerIsAssembled()
         {
             // Arrange.
-            IAssemblableComputer computer = new Computer(haveToCreateDetails: true);
+            IAssemblableComputer computer = new Computer(hasToCreateDetails: true);
 
             // Act.
             bool isComputerAssembled = computer.IsAssembled();
@@ -116,7 +116,7 @@ namespace Tests
         public void WhenSwitchComputerOn_AndComputerIsNotAssembled_ThenThrowingException()
         {
             // Arrange.
-            Computer computer = new Computer(haveToCreateDetails: false);
+            Computer computer = new Computer(hasToCreateDetails: false);
 
             // Act.
 
@@ -128,7 +128,7 @@ namespace Tests
         public void WhenSwitchComputerOn_AndComputerIsAssembled_ThenComputerIsSwitchingOn()
         {
             // Arrange.
-            Computer computer = new Computer(haveToCreateDetails: true);
+            Computer computer = new Computer(hasToCreateDetails: true);
 
             // Act.
             computer.SwitchOn();
@@ -141,7 +141,7 @@ namespace Tests
         public void WhenDetailRemoveFromComputer_AndComputerIsOn_ThenComputerIsSwitchingOff()
         {
             // Arrange.
-            Computer computer = new Computer(isOn: true, haveToCreateDetails: true);
+            Computer computer = new Computer(isOn: true, hasToCreateDetails: true);
 
             // Act.
             computer.Details.First().RemoveFromComputer();
@@ -154,7 +154,7 @@ namespace Tests
         public void WhenDetailRemoveFromComputer_AndDetailIsSetInIt_ThenDetailsComputerBecomingNull()
         {
             // Arrange.
-            IAssemblableComputer computer = new Computer(haveToCreateDetails: true);
+            IAssemblableComputer computer = new Computer(hasToCreateDetails: true);
             IComputerDetail detail = computer.Details.First();
 
             // Act.
@@ -168,7 +168,7 @@ namespace Tests
         public void WhenDetailSetInComputer_AndDetailIsNotSetInIt_ThenDetailsComputerBecomingThis()
         {
             // Arrange.
-            IAssemblableComputer computer = new Computer(haveToCreateDetails: false);
+            IAssemblableComputer computer = new Computer(hasToCreateDetails: false);
             IComputerDetail detail = new ComputerDetail(ComputerDetailType.Motherboard);
 
             // Act.
