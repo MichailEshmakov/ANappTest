@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputersTask
 {
+    /// <summary>
+    /// Продваемый компьютер. Надстройка над компьютером, позволяющая его продавать.
+    /// </summary>
     public class SellableComputer : ISellable
     {
         private int _price;

@@ -44,9 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
+    <Compile Include="AssemblableComputer.cs" />
+    <Compile Include="ComputerDetailType.cs" />
+    <Compile Include="IAssemblableComputer.cs" />
+    <Compile Include="IComputerDetail.cs" />
     <Compile Include="IInventory.cs" />
     <Compile Include="ISellable.cs" />
     <Compile Include="IShop.cs" />
+    <Compile Include="ComputerDetail.cs" />
     <Compile Include="SellableComputer.cs" />
     <Compile Include="Computer.cs" />
     <Compile Include="ComputerClass.cs" />
